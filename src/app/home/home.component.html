@@ -1,46 +1,48 @@
-Home
 <section>
-    <button mat-raised-button color="primary" routerLink="/login">
+<button mat-raised-button color="dark" routerLink="/login" >
         <mat-icon>login</mat-icon>
         <span>Login</span>
     </button>
-    <button mat-raised-button color="primary" (click)="logout()">
+<button mat-raised-button color="dark" (click)="logout()">
         <mat-icon>logout</mat-icon>
         <span>Log out</span>
     </button>
-    <button mat-raised-button color="primary" routerLink="/signup">
+
+ <button mat-raised-button color="dark" routerLink="/signup" >
         <mat-icon>person_add</mat-icon>
         <span>Sign up</span>
     </button>
-    <button mat-raised-button color="primary" routerLink="/forgot-password">
+
+    <button mat-raised-button color="dark" routerLink="/forgot-password">
         <mat-icon>help_outline</mat-icon>
         <span>Forgot password</span>
     </button>
-    <button mat-raised-button color="primary" routerLink="/verify-email">
+
+    <button mat-raised-button color="dark" routerLink="/verify-email">
         <mat-icon>help_outline</mat-icon>
         <span>Resend email verification</span>
     </button>
-</section>
-<br>
 
-<section>
-    <button mat-raised-button color="primary" routerLink="/dashboard">
+
+
+
+    <button mat-raised-button color="dark" routerLink="/dashboard">
         <mat-icon>dashboard</mat-icon>
         <span>Dashboard</span>
     </button>
-    <button mat-raised-button color="primary" routerLink="/admin">
+    <button mat-raised-button color="dark" routerLink="/admin">
         <mat-icon>admin_panel_settings</mat-icon>
         <span>Admin Dashboard</span>
     </button>
+
+    <font COLOR="white" align="center"><h2 >Inicio</h2></font>
 </section>
-
-<br>
-
+<!-- 
 <mat-card *ngIf="(afAuth.user | async)">
     <mat-icon>check_circle</mat-icon>
-    <span>User is logged in</span>
+    <span> User is logged in</span>
 </mat-card>
 <mat-card *ngIf="!(afAuth.user | async)">
     <mat-icon>do_not_disturb</mat-icon>
     <span>User is not logged in</span>
-</mat-card>
+</mat-card> -->

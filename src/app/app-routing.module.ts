@@ -10,6 +10,8 @@ import { SignupComponent } from './signup/signup.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 
 import { AuthGuard } from './services/auth.guard';
+import { ListDevicesComponent } from './components/list-devices/list-devices.component';
+import { CreateDeviceComponent } from './components/create-device/create-device.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,7 +22,14 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'verify-email', component: VerifyEmailComponent },
-    { path: '**', component: HomeComponent },                       // catch-all in case no other path matched
+                           
+    { path: 'list-devices', component:ListDevicesComponent },
+    { path: 'create-device', component:CreateDeviceComponent},
+    { path: 'editDevice/:id', component: CreateDeviceComponent },
+    { path: '**', redirectTo: 'list-devices', pathMatch: 'full' },
+    { path: '**', component: HomeComponent },
+
+
 ];
 
 @NgModule({
