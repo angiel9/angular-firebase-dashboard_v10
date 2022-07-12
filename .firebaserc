@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "dashboard-cbb32"
+  },
+  "targets": {
+    "dashboard-cbb32": {
+      "hosting": {
+        "angular-firebase-dashboard": [
+          "dashboard-cbb32"
+        ]
+      }
+    }
+  }
+}
