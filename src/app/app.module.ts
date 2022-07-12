@@ -57,6 +57,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 // import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
+import { ListDevicesComponent } from './components/list-devices/list-devices.component';
+import { CreateDeviceComponent } from './components/create-device/create-device.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
     declarations: [
@@ -67,7 +70,10 @@ import { environment } from '../environments/environment';
         ForgotPasswordComponent,
         VerifyEmailComponent,
         DashboardComponent,
-        AdminDashboardComponent
+        AdminDashboardComponent,
+        ListDevicesComponent,
+        CreateDeviceComponent,
+        NavbarComponent
     ],
     imports: [
         BrowserModule,
