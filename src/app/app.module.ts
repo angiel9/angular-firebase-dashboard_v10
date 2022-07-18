@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
@@ -47,7 +46,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
-
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -74,6 +74,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
         ListDevicesComponent,
         CreateDeviceComponent,
         NavbarComponent
+
     ],
     imports: [
         BrowserModule,
@@ -84,7 +85,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
         AngularFirestoreModule,                                 // imports firebase/firestore, only needed for database features
         // AngularFireStorageModule,                               // imports firebase/storage only needed for storage features
         AngularFireDatabaseModule,
-
+        ToastrModule.forRoot(), 
+        BrowserAnimationsModule,
         MatAutocompleteModule,
         MatBadgeModule,
         MatButtonModule,

@@ -3,7 +3,8 @@
         <div class="card-body">
             <p><span class="h4">Listado de Dispositivos</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             <button class="btn btn-dark btn-sm float-right" routerLink="/create-device">Agregar</button></p>
-            <table class="table mt-5 table table-striped">
+           
+            <table   class="table mt-5 table table-striped">
                 
                 <thead>
                   <tr>
@@ -16,39 +17,19 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
+                  <tr *ngFor="let dispositivos of dispositivos">
                     <th scope="row">1</th>
-                    <td>Sensor</td>
-                    <td>Tecnología</td>
-                    <td>127.0.0.1</td>
+                    <td>{{dispositivos.nombre}}</td>
+                    <td>{{dispositivos.descripcion}}</td>
+                    <td>{{dispositivos.direccionip}}</td>
                     <td>
-                        <i class="fas fa-edit fa-lg text-info"></i>  &nbsp;
-                        <i class="fas fa-trash fa-lg text-danger"></i>
+                        <i class="fas fa-edit fa-lg text-info" [routerLink]="['/editDevice/',dispositivos.id]"></i>  &nbsp;
+                        <i (click)="eliminarDispositivo(dispositivos.id)" class="fas fa-trash fa-lg text-danger"></i>
                     </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Sensor 2</td>
-                    <td>Thornton</td>
-                    <td>127.0.0.1</td>
-                    <td>
-                        <i class="fas fa-edit fa-lg text-info"></i>  &nbsp;
-                        <i class="fas fa-trash fa-lg text-danger"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Sensor 2</td>
-                    <td>Thornton</td>
-                    <td>127.0.0.1</td>
-                    <td>
-                        <i class="fas fa-edit fa-lg text-info"></i>  &nbsp;
-                        <i class="fas fa-trash fa-lg text-danger"></i>
-                    </td>
-                  </tr>
+                 
                 </tbody>
               </table>
-              
+             
         </div>
     </div>
 </div>

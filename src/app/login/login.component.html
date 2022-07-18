@@ -1,7 +1,7 @@
 Login
 <br>
 <br>
-<button mat-raised-button color="primary" routerLink="/home">
+<button mat-raised-button color="dark" routerLink="/home">
     <mat-icon>home</mat-icon>
     <span>Home</span>
 </button>
@@ -24,10 +24,10 @@ Login
             <span>{{ firebaseErrorMessage }}</span>
         </div>
 
-        <button mat-raised-button color="primary">Login</button>
+        <button mat-raised-button color="dark">Login</button>
     </form>
 </mat-card>
 
 <div class="progressIndicator" [style.display]="isProgressVisible ? 'inline' : 'none' ">
-    <mat-progress-spinner class=" example-margin" color="primary" mode="indeterminate"></mat-progress-spinner>
+    <mat-progress-spinner class=" example-margin" color="dark" mode="indeterminate"></mat-progress-spinner>
 </div>
